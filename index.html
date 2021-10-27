@@ -25,13 +25,14 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap"
       rel="stylesheet"
     />
-    />
   </head>
   <body>
     <main>
       <div class="container">
         <div class="avatar">
-          <img src="images/build.svg" alt="selo Rockeseat" />
+          <span>
+            <img src="images/build.svg" alt="selo Rockeseat" />
+          </span>
           <img src="https://lorempixel.com/185/185/people" alt="Foto pessoal" />
         </div>
 
@@ -44,12 +45,8 @@
 
         <ul>
           <li>
-            <a href="">
-              <img
-                src="./images/youtube.svg"
-                alt="ícone youtube"
-                target="_blank"
-              />
+            <a>
+              <img src="./images/youtube.svg" alt="ícone youtube" />
             </a>
           </li>
           <li>
@@ -58,8 +55,11 @@
             </a>
           </li>
           <li>
-            <a href="https://web.facebook.com/moacir.lopes.3386/">
-              <img src="./images/facebook.svg" alt="" target="_blank" />
+            <a
+              href="https://web.facebook.com/moacir.lopes.3386/"
+              target="_blank"
+            >
+              <img src="./images/facebook.svg" alt="" />
             </a>
           </li>
           <li>
@@ -70,5 +70,31 @@
         </ul>
       </div>
     </main>
+
+    <script>
+      //Javascript é lido de cima para baixo um de cada vez
+
+      //Tipos primitivos
+      // Strings -> tudo que é texto - '' "" ``
+      // Number -> tudo que é numero - 0123456
+      // boolean -> dizer o que éverdadeiro ou falso -> true/false
+
+      //Variavéis
+      //let ->  // let name = 'Jack' -> pode ser alterado
+      //const ->   // const name = 'Jack' -> não pode ser alterado
+      //var
+      // const name = 'Jack'
+      // let phone = 991198594
+      // let accept = true
+
+      //Objetos -> forma de guarda varios dados que se ligam
+      const user = {
+        name: 'Moacir lopes',
+        phone: 991198594,
+        aceppt: true
+      }
+
+      alert(user.name)
+    </script>
   </body>
 </html>
