@@ -1,16 +1,3 @@
-<!--
-  HTML
-
-  HyperText - Hiper texto
-  é um texto com links
-
-  Markup - marcação
-  Tags
-
-  Language
-  regras de uma linguagem
-
--->
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -36,34 +23,33 @@
           <img src="https://lorempixel.com/185/185/people" alt="Foto pessoal" />
         </div>
 
-        <h1>Moacir Lopes</h1>
+        <h1 id="userName">Moacir Lopes</h1>
         <a
+          id="githubmedia"
           href="https://github.com/moacirlopes?tab=overview&from=2021-10-01&to=2021-10-25"
+          target="blank"
           ><img src="./images/github.svg" alt="ícone github" /> moacirlopes</a
         >
         <p>An instructor focused on helping pople start programming for web</p>
 
-        <ul>
-          <li>
+        <ul id="socialLinks">
+          <li class="youtube" target="_blank">
             <a>
               <img src="./images/youtube.svg" alt="ícone youtube" />
             </a>
           </li>
-          <li>
-            <a href="">
+          <li class="facebook">
+            <a href="" target="_blank">
               <img src="./images/instagram.svg" alt="" target="_blank" />
             </a>
           </li>
-          <li>
-            <a
-              href="https://web.facebook.com/moacir.lopes.3386/"
-              target="_blank"
-            >
-              <img src="./images/facebook.svg" alt="" />
+          <li class="instagram">
+            <a href="">
+              <img src="./images/facebook.svg" alt="" target="_blank" />
             </a>
           </li>
-          <li>
-            <a href=""
+          <li class="twitter">
+            <a href="" target="_blank"
               ><img src="./images/twitter.svg" alt="" target="_blank" />
             </a>
           </li>
@@ -72,29 +58,34 @@
     </main>
 
     <script>
-      //Javascript é lido de cima para baixo um de cada vez
-
-      //Tipos primitivos
-      // Strings -> tudo que é texto - '' "" ``
-      // Number -> tudo que é numero - 0123456
-      // boolean -> dizer o que éverdadeiro ou falso -> true/false
-
-      //Variavéis
-      //let ->  // let name = 'Jack' -> pode ser alterado
-      //const ->   // const name = 'Jack' -> não pode ser alterado
-      //var
-      // const name = 'Jack'
-      // let phone = 991198594
-      // let accept = true
-
-      //Objetos -> forma de guarda varios dados que se ligam
-      const user = {
-        name: 'Moacir lopes',
-        phone: 991198594,
-        aceppt: true
+      const LinksSocialMedia = {
+        github: 'jakeliny',
+        youtube: 'jakelinygracielly',
+        facebook: 'maikybrito',
+        instagram: 'jakeliny.gracielly',
+        twitter: 'jakelinytec'
       }
 
-      alert(user.name)
+      function chargeSocialMediaLinks() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+
+          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
+
+          alert(li.children[0].href)
+        }
+      }
+
+      chargeSocialMediaLinks()
+
+      //Dom -> documeto paralelo, que mapea as tags,liga o javascript com as tags , ele permite alterar as tag com o javascript
+
+      //camelCase = minusculo + maisculo
+      //PascalCase = maisculo + maisculo
+      //snake_case = separar palavras com underline
+
+      // ser humano 123456789
+      //computador 0123456789
     </script>
   </body>
 </html>
